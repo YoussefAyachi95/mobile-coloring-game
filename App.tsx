@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import SvgViewer from './components/SvgViewer';
 import { useEffect, useState } from 'react';
+import ColorPalette from './components/ColorPalette';
 
 export default function App() {
   const [fillColors, setFillColors] = useState<string[]>([])
@@ -18,10 +19,11 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
+      <ColorPalette currentColor={currentColor} changeColor={setCurrentColor} />
       <SvgViewer fillColors={fillColors} onFill={onFill} />
-    </View>
+    </SafeAreaView>
   );
 }
 
