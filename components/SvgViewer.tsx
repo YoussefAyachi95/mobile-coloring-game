@@ -1,4 +1,4 @@
-import { View, Text, Dimensions, ScrollView } from 'react-native' 
+import { View, Dimensions, ScrollView } from 'react-native' 
 import DummySvg from './DummySvg';
 import { Svg } from 'react-native-svg';
 
